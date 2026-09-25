@@ -1,0 +1,934 @@
+/* ==============================
+   RESET
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==============================
+   BODY
+============================== */
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f4f1eb;
+
+    color: #111;
+
+    padding: 50px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* ==============================
+   MAIN GRID
+============================== */
+
+.poster {
+
+    width: 1120px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1.55fr
+        1fr;
+
+    grid-template-rows:
+        320px
+        250px
+        250px;
+
+    gap: 24px;
+}
+
+
+/* ==============================
+   COMMON CARD
+============================== */
+
+.card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+}
+
+
+/* ==============================
+   LEFT TOP
+============================== */
+
+.movie-card {
+
+    background: #ead8c4;
+
+    padding: 40px 32px;
+}
+
+
+.movie-card h2 {
+
+    font-size: 38px;
+
+    line-height: 0.94;
+
+    letter-spacing: -2px;
+}
+
+
+.movie-card h2 span {
+
+    color: #d52b2b;
+
+    font-style: italic;
+}
+
+
+.watch-btn {
+
+    margin-top: 35px;
+
+    padding: 16px 25px;
+
+    border: none;
+
+    border-radius: 40px;
+
+    background: #ffca4b;
+
+    color: #111;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.watch-btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.15);
+}
+
+
+.ticket {
+
+    position: absolute;
+
+    right: 25px;
+
+    bottom: 20px;
+
+    font-size: 48px;
+
+    transform: rotate(-12deg);
+}
+
+
+/* ==============================
+   CENTER HERO
+============================== */
+
+.hero {
+
+    background: #171717;
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px;
+}
+
+
+.hero h1 {
+
+    font-size: 56px;
+
+    line-height: 0.95;
+
+    letter-spacing: -3px;
+}
+
+
+.hero h1 em {
+
+    color: #ffca4b;
+
+    font-style: italic;
+}
+
+
+.hero p {
+
+    margin-top: 12px;
+
+    color: #ccc;
+
+    font-size: 16px;
+}
+
+
+.stars {
+
+    margin-top: 25px;
+
+    color: #ffca4b;
+
+    font-size: 28px;
+
+    letter-spacing: 6px;
+}
+
+
+/* FILM STRIP */
+
+.film-strip {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 10px;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            #ffca4b 0px,
+            #ffca4b 25px,
+            transparent 25px,
+            transparent 40px
+        );
+}
+
+
+/* ==============================
+   RIGHT TOP
+============================== */
+
+.showtimes {
+
+    background: #ded1ff;
+
+    padding: 38px 32px;
+}
+
+
+.showtimes h2 {
+
+    font-size: 32px;
+
+    line-height: 0.95;
+
+    letter-spacing: -1.5px;
+}
+
+
+.screen {
+
+    margin-top: 25px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 20px;
+}
+
+
+.screen h4 {
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+
+    text-transform: uppercase;
+}
+
+
+.times {
+
+    height: 105px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 10px;
+}
+
+
+.time {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 11px;
+}
+
+
+.bar {
+
+    width: 20px;
+
+    border-radius:
+        20px
+        20px
+        5px
+        5px;
+
+    background: #5e3fc7;
+}
+
+
+.bar-1 {
+    height: 40px;
+}
+
+.bar-2 {
+    height: 65px;
+}
+
+.bar-3 {
+    height: 95px;
+}
+
+.bar-4 {
+    height: 75px;
+}
+
+.bar-5 {
+    height: 52px;
+}
+
+
+.showtime-text {
+
+    margin-top: 20px;
+
+    font-size: 15px;
+
+    line-height: 1.2;
+}
+
+
+/* ==============================
+   FEATURED MOVIE
+============================== */
+
+.featured {
+
+    background: #df3b32;
+
+    color: white;
+
+    padding: 30px 25px;
+}
+
+
+.featured h2 {
+
+    font-size: 36px;
+
+    line-height: 0.9;
+
+    letter-spacing: -2px;
+}
+
+
+.movie-poster {
+
+    position: absolute;
+
+    width: 145px;
+
+    height: 180px;
+
+    right: 18px;
+
+    bottom: -10px;
+
+    border-radius: 8px;
+
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            #ffca4b 0 7%,
+            transparent 8%
+        ),
+        linear-gradient(
+            145deg,
+            #333,
+            #080808
+        );
+
+    transform: rotate(4deg);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-end;
+
+    text-align: center;
+
+    padding-bottom: 20px;
+}
+
+
+.poster-title {
+
+    color: #ffca4b;
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+    line-height: 0.9;
+}
+
+
+/* ==============================
+   GENRES
+============================== */
+
+.genres {
+
+    background: white;
+
+    padding: 30px;
+}
+
+
+.genre-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.movie-icon {
+
+    width: 46px;
+
+    height: 46px;
+
+    background: #ffca4b;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 22px;
+}
+
+
+.genres h3 {
+
+    font-size: 27px;
+
+    line-height: 0.9;
+
+    letter-spacing: -1px;
+}
+
+
+.genre-list {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    margin-top: 25px;
+}
+
+
+.genre-list span {
+
+    padding: 10px 15px;
+
+    background: #eeeeee;
+
+    border-radius: 30px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition: 0.2s;
+}
+
+
+.genre-list span:hover {
+
+    background: #ffca4b;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==============================
+   UPCOMING RELEASES
+============================== */
+
+.release {
+
+    background: #ffca4b;
+
+    padding: 28px;
+}
+
+
+.release h2 {
+
+    font-size: 30px;
+
+    line-height: 0.9;
+
+    letter-spacing: -1.5px;
+}
+
+
+.calendar {
+
+    background: white;
+
+    margin-top: 22px;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+}
+
+
+.calendar-header {
+
+    background: #5e3fc7;
+
+    color: white;
+
+    padding: 12px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+.days {
+
+    padding: 18px 7px;
+
+    display: flex;
+
+    justify-content: space-around;
+}
+
+
+.days span {
+
+    width: 28px;
+
+    height: 28px;
+
+    border-radius: 50%;
+
+    background: #eeeeee;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 11px;
+}
+
+
+.days .active {
+
+    background: #5e3fc7;
+
+    color: white;
+}
+
+
+/* ==============================
+   QUOTE
+============================== */
+
+.quote {
+
+    background: #5e3fc7;
+
+    color: white;
+
+    padding: 35px 28px;
+}
+
+
+.quote h2 {
+
+    font-size: 36px;
+
+    line-height: 0.92;
+
+    letter-spacing: -2px;
+}
+
+
+.quote p {
+
+    margin-top: 22px;
+
+    color: #ddd;
+
+    font-size: 14px;
+
+    line-height: 1.3;
+}
+
+
+.clapper {
+
+    position: absolute;
+
+    right: 20px;
+
+    bottom: 15px;
+
+    font-size: 60px;
+
+    transform: rotate(-8deg);
+}
+
+
+/* ==============================
+   RATING
+============================== */
+
+.rating {
+
+    background: white;
+
+    padding: 30px;
+}
+
+
+.rating-number {
+
+    font-size: 68px;
+
+    font-weight: 800;
+
+    letter-spacing: -5px;
+}
+
+
+.rating-number span {
+
+    color: #ffca4b;
+}
+
+
+.rating p {
+
+    margin-top: -5px;
+
+    font-size: 16px;
+}
+
+
+.avatars {
+
+    display: flex;
+
+    margin-top: 27px;
+}
+
+
+.avatars div {
+
+    width: 52px;
+
+    height: 52px;
+
+    border-radius: 50%;
+
+    border: 4px solid white;
+
+    background: #ddd;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 23px;
+
+    margin-left: -7px;
+}
+
+
+.avatars div:first-child {
+
+    margin-left: 0;
+}
+
+
+/* ==============================
+   NOW PLAYING
+============================== */
+
+.now-playing {
+
+    background: #171717;
+
+    color: white;
+
+    padding: 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+
+.mini-poster {
+
+    width: 145px;
+
+    height: 180px;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            #ffca4b 0 8%,
+            transparent 9%
+        ),
+        linear-gradient(
+            145deg,
+            #df3b32,
+            #111
+        );
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding-bottom: 18px;
+}
+
+
+.mini-poster span {
+
+    color: #ffca4b;
+
+    font-size: 24px;
+
+    font-weight: 800;
+
+    line-height: 0.9;
+}
+
+
+.playing-content h2 {
+
+    font-size: 34px;
+
+    line-height: 0.9;
+
+    letter-spacing: -2px;
+}
+
+
+.playing-content p {
+
+    margin-top: 18px;
+
+    color: #ccc;
+
+    font-size: 14px;
+
+    line-height: 1.3;
+}
+
+
+.playing-content button {
+
+    margin-top: 18px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    padding: 11px 17px;
+
+    background: #ffca4b;
+
+    color: #111;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+
+.playing-content button:hover {
+
+    transform: translateY(-2px);
+}
+
+
+/* ==============================
+   TABLET
+============================== */
+
+@media (max-width: 950px) {
+
+    body {
+        padding: 20px;
+        align-items: flex-start;
+    }
+
+    .poster {
+
+        width: 100%;
+
+        grid-template-columns: 1fr 1fr;
+
+        grid-template-rows: auto;
+    }
+
+    .hero {
+
+        grid-column: span 2;
+
+        min-height: 300px;
+    }
+
+    .now-playing {
+
+        grid-column: span 2;
+    }
+}
+
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media (max-width: 650px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .poster {
+
+        display: flex;
+
+        flex-direction: column;
+    }
+
+    .card {
+
+        min-height: 260px;
+    }
+
+    .hero {
+
+        min-height: 330px;
+    }
+
+    .hero h1 {
+
+        font-size: 43px;
+    }
+
+    .now-playing {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .mini-poster {
+
+        width: 130px;
+
+        height: 160px;
+    }
+}
